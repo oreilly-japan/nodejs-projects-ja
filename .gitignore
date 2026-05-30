@@ -1,2 +1,28 @@
 .DS_Store
 *~
+
+# Dependencies
+node_modules/
+
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Local runtime data
+*.sqlite
+*.sqlite3
+*.db
+users.db
+chapter_2/2_1/csv_app/test.txt
+chapter_2/2_2/csv_app/contacts.csv
+chapter_2/2_4/csv_app/contacts.csv
+chapter_2/2_prac/csv_app/contacts.csv
+
+
+# Tool/cache directories
+.playwright-mcp/

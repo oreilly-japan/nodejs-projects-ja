@@ -1,0 +1,21 @@
+services:
+  chapter5_1:
+    build: ./5_1/food_feeds_rss_app
+    stdin_open: true
+    tty: true
+  chapter5_2:
+    build: ./5_2/food_feeds_rss_app
+    stdin_open: true
+    tty: true
+  chapter5_3:
+    build: ./5_3/food_feeds_rss_app
+    stdin_open: true
+    tty: true
+  chapter5_4:
+    build: ./5_4/food_feeds_rss_app
+    stdin_open: true
+    tty: true
+  chapter5_prac:
+    build: ./5_prac/food_feeds_rss_app
+    stdin_open: true
+    tty: true

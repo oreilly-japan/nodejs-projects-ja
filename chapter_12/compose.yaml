@@ -1,0 +1,99 @@
+services:
+  # 12_1: main + peer x2
+  chapter12_1:
+    build: ./12_1/blockchain_marketplace
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_URL: http://chapter12_1:3000
+      INITIAL_PEERS: ""
+  chapter12_1_peer1:
+    build: ./12_1/blockchain_marketplace
+    ports:
+      - "3010:3000"
+    environment:
+      NODE_URL: http://chapter12_1_peer1:3000
+      INITIAL_PEERS: http://chapter12_1:3000
+    depends_on:
+      - chapter12_1
+  chapter12_1_peer2:
+    build: ./12_1/blockchain_marketplace
+    ports:
+      - "3011:3000"
+    environment:
+      NODE_URL: http://chapter12_1_peer2:3000
+      INITIAL_PEERS: http://chapter12_1:3000
+    depends_on:
+      - chapter12_1
+
+  # 12_2: main + peer x2
+  chapter12_2:
+    build: ./12_2/blockchain_marketplace
+    ports:
+      - "3100:3000"
+    environment:
+      NODE_URL: http://chapter12_2:3000
+      INITIAL_PEERS: ""
+  chapter12_2_peer1:
+    build: ./12_2/blockchain_marketplace
+    ports:
+      - "3110:3000"
+    environment:
+      NODE_URL: http://chapter12_2_peer1:3000
+      INITIAL_PEERS: http://chapter12_2:3000
+    depends_on:
+      - chapter12_2
+  chapter12_2_peer2:
+    build: ./12_2/blockchain_marketplace
+    ports:
+      - "3111:3000"
+    environment:
+      NODE_URL: http://chapter12_2_peer2:3000
+      INITIAL_PEERS: http://chapter12_2:3000
+    depends_on:
+      - chapter12_2
+
+  # 12_3: main + peer x2
+  chapter12_3:
+    build: ./12_3/blockchain_marketplace
+    ports:
+      - "3200:3000"
+    environment:
+      NODE_URL: http://chapter12_3:3000
+      INITIAL_PEERS: ""
+  chapter12_3_peer1:
+    build: ./12_3/blockchain_marketplace
+    ports:
+      - "3210:3000"
+    environment:
+      NODE_URL: http://chapter12_3_peer1:3000
+      INITIAL_PEERS: http://chapter12_3:3000
+    depends_on:
+      - chapter12_3
+  chapter12_3_peer2:
+    build: ./12_3/blockchain_marketplace
+    ports:
+      - "3211:3000"
+    environment:
+      NODE_URL: http://chapter12_3_peer2:3000
+      INITIAL_PEERS: http://chapter12_3:3000
+    depends_on:
+      - chapter12_3
+
+  # 12_prac: main + peer x1
+  chapter12_prac:
+    build: ./12_prac/blockchain_marketplace
+    ports:
+      - "3300:3000"
+    environment:
+      NODE_URL: http://chapter12_prac:3000
+      INITIAL_PEERS: ""
+  chapter12_prac_peer1:
+    build: ./12_prac/blockchain_marketplace
+    ports:
+      - "3310:3000"
+    environment:
+      NODE_URL: http://chapter12_prac_peer1:3000
+      INITIAL_PEERS: http://chapter12_prac:3000
+    depends_on:
+      - chapter12_prac

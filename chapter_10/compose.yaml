@@ -1,0 +1,31 @@
+services:
+  chapter10_1:
+    build: ./10_1/app_authentication
+    environment:
+      APP_PORT: "3000"
+    ports:
+      - "3000:3000"
+  chapter10_2:
+    build: ./10_2/app_authentication
+    environment:
+      APP_PORT: "3001"
+    ports:
+      - "3001:3000"
+  chapter10_3:
+    build: ./10_3/app_authentication
+    environment:
+      APP_PORT: "3002"
+    ports:
+      - "3002:3000"
+  chapter10_4:
+    build: ./10_4/app_authentication
+    environment:
+      APP_PORT: "3003"
+    ports:
+      - "3003:3000"
+  chapter10_prac:
+    build: ./10_prac/app_authentication
+    environment:
+      APP_PORT: "3004"
+    ports:
+      - "3004:3000"

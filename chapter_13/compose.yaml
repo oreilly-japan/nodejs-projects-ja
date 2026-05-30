@@ -1,0 +1,27 @@
+services:
+  chapter13_1:
+    build: ./13_1/interview_atlas_ai
+    env_file:
+      - ./13_1/interview_atlas_ai/.env
+  chapter13_2:
+    build: ./13_2/interview_atlas_ai
+    env_file:
+      - ./13_2/interview_atlas_ai/.env
+  chapter13_3:
+    build: ./13_3/interview_atlas_ai
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./13_3/interview_atlas_ai/.env
+  chapter13_4:
+    build: ./13_4/interview_atlas_ai
+    ports:
+      - "3001:3000"
+    env_file:
+      - ./13_4/interview_atlas_ai/.env
+  chapter13_prac:
+    build: ./13_prac/interview_atlas_ai
+    ports:
+      - "3002:3000"
+    env_file:
+      - ./13_prac/interview_atlas_ai/.env

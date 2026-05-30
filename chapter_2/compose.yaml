@@ -1,0 +1,21 @@
+services:
+  chapter2_1:
+    build: ./2_1/csv_app
+    stdin_open: true
+    tty: true
+  chapter2_2:
+    build: ./2_2/csv_app
+    stdin_open: true
+    tty: true
+  chapter2_3:
+    build: ./2_3/csv_app
+    stdin_open: true
+    tty: true
+  chapter2_4:
+    build: ./2_4/csv_app
+    stdin_open: true
+    tty: true
+  chapter2_prac:
+    build: ./2_prac/csv_app
+    stdin_open: true
+    tty: true

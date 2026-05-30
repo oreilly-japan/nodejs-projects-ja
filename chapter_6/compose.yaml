@@ -1,0 +1,21 @@
+services:
+  chapter6_1:
+    build: ./6_1/library_api
+    ports:
+      - "3000:3000"
+  chapter6_2:
+    build: ./6_2/library_api
+    ports:
+      - "3001:3000"
+  chapter6_3:
+    build: ./6_3/library_api
+    ports:
+      - "3002:3000"
+  chapter6_4:
+    build: ./6_4/library_api
+    ports:
+      - "3003:3000"
+  chapter6_prac:
+    build: ./6_prac/library_api
+    ports:
+      - "3004:3000"

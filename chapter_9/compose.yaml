@@ -1,0 +1,11 @@
+services:
+  chapter9_1:
+    build: ./9_1/site_scraper
+  chapter9_2:
+    build: ./9_2/site_scraper
+  chapter9_prac:
+    build: ./9_prac/site_scraper
+    ports:
+      - "3000:3000"
+    environment:
+      - KEYWORD=${KEYWORD:-performance}

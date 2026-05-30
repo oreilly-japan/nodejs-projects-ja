@@ -1,0 +1,21 @@
+services:
+  chapter3_1:
+    build: ./3_1/restaurant_web_server
+    ports:
+      - "3000:3000"
+  chapter3_2:
+    build: ./3_2/restaurant_web_server
+    ports:
+      - "3001:3000"
+  chapter3_3:
+    build: ./3_3/restaurant_web_server
+    ports:
+      - "3002:3000"
+  chapter3_4:
+    build: ./3_4/restaurant_web_server
+    ports:
+      - "3003:3000"
+  chapter3_prac:
+    build: ./3_prac/restaurant_web_server
+    ports:
+      - "3004:3000"

@@ -1,0 +1,17 @@
+{
+  "name": "coffee_queue",
+  "version": "1.0.0",
+  "description": "JavaShipped Coffee Order Manager with Redis Pub/Sub",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jon Wexler",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fastify/formbody": "^8.0.2",
+    "fastify": "^5.8.2",
+    "redis": "^5.11.0"
+  }
+}

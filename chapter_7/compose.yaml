@@ -1,0 +1,21 @@
+services:
+  chapter7_1:
+    build: ./7_1/sentiment_journal
+    stdin_open: true
+    tty: true
+  chapter7_2:
+    build: ./7_2/sentiment_journal
+    stdin_open: true
+    tty: true
+  chapter7_3:
+    build: ./7_3/sentiment_journal
+    stdin_open: true
+    tty: true
+  chapter7_4:
+    build: ./7_4/sentiment_journal
+    stdin_open: true
+    tty: true
+  chapter7_prac:
+    build: ./7_prac/sentiment_journal
+    stdin_open: true
+    tty: true

@@ -1,0 +1,75 @@
+services:
+  chapter11_1:
+    build: ./11_1/coffee_queue
+    ports:
+      - "3000:3000"
+  chapter11_2:
+    build: ./11_2/coffee_queue
+    ports:
+      - "3001:3000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+  chapter11_3:
+    build: ./11_3/coffee_queue
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+  chapter11_4:
+    build: ./11_4/coffee_queue
+    ports:
+      - "3002:3000"
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+  chapter11_5_main:
+    build: ./11_5/coffee_queue/main_server
+    ports:
+      - "3004:3000"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - rabbitmq
+  chapter11_5_fulfillment:
+    build: ./11_5/coffee_queue/fulfillment_service
+    ports:
+      - "3005:3001"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - rabbitmq
+  chapter11_5_analytics:
+    build: ./11_5/coffee_queue/analytics_service
+    ports:
+      - "3006:3002"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - rabbitmq
+  chapter11_prac1_inventory:
+    build: ./11_prac1/coffee_queue/inventory_service
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+  chapter11_prac2_fulfillment:
+    build: ./11_prac2/coffee_queue/fulfillment_service
+    ports:
+      - "3007:3001"
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+    depends_on:
+      - rabbitmq
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"

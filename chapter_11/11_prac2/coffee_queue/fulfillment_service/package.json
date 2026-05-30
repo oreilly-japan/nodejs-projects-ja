@@ -1,0 +1,17 @@
+{
+  "name": "fulfillment_service",
+  "version": "1.0.0",
+  "description": "RabbitMQ fulfillment service with requeue on failure",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@fastify/formbody": "^8.0.2",
+    "amqplib": "^0.10.9",
+    "fastify": "^5.8.2"
+  }
+}

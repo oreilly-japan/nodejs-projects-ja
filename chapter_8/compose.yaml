@@ -1,0 +1,23 @@
+services:
+  chapter8_1:
+    build: ./8_1/marketing_mailer
+  chapter8_2:
+    build: ./8_2/marketing_mailer
+    ports:
+      - "3000:3000"
+  chapter8_3:
+    build: ./8_3/marketing_mailer
+    ports:
+      - "3001:3000"
+  chapter8_4:
+    build: ./8_4/marketing_mailer
+    ports:
+      - "3002:3000"
+  chapter8_5:
+    build: ./8_5/marketing_mailer
+    ports:
+      - "3003:3000"
+  chapter8_prac:
+    build: ./8_prac/marketing_mailer
+    ports:
+      - "3004:3000"

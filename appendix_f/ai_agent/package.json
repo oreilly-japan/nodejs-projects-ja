@@ -1,0 +1,22 @@
+{
+  "name": "ai_agent",
+  "version": "1.0.0",
+  "description": "Appendix F: AI Agent Example",
+  "type": "module",
+  "scripts": {
+    "start": "tsx main.ts",
+    "postinstall": "playwright install chromium"
+  },
+  "author": "Yuki Okita",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@playwright/mcp": "^0.0.30",
+    "playwright": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

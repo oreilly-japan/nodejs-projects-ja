@@ -1,0 +1,15 @@
+{
+  "name": "coffee_queue",
+  "version": "1.0.0",
+  "description": "JavaShipped Redis Pub/Sub minimal demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jon Wexler",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "redis": "^5.11.0"
+  }
+}
