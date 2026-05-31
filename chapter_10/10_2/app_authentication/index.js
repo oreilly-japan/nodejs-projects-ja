@@ -37,6 +37,22 @@ app.get("/", async (request, reply) => {
   return reply.view("index", formVars);
 });
 
+const users = {};
+
+app.post("/account", async (request, reply) => {
+  const { username, password } = request.body;
+  users[username] = password;
+  return reply.send({ message: "Account created." });
+});
+
+app.post("/auth", async (request, reply) => {
+  const { username, password } = request.body;
+  if (users[username] && users[username] === password) {
+    return reply.send({ message: "Logged in." });
+  }
+  return reply.redirect("/?page=login");
+});
+
 try {
   await app.listen({ port: PORT, host: "0.0.0.0" });
   console.log(`App listening on http://${PUBLIC_HOST}:${PUBLIC_PORT}`);
