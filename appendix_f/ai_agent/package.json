@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
-    "@playwright/mcp": "^0.0.30",
+    "@playwright/mcp": "^0.0.84",
     "playwright": "^1.49.0"
   },
   "devDependencies": {
